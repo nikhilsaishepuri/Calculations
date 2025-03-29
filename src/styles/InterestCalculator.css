@@ -1,0 +1,155 @@
+/* Mobile-First Interest Calculator Styles */
+.interest-calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Calculator Container */
+  .interest-calculator-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Title */
+  .interest-calculator-container h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Input Fields - Mobile Optimized */
+  .interest-calculator-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    background: #f8f9fa;
+    box-sizing: border-box;
+  }
+  
+  /* Remove number input spinners */
+  .interest-calculator-container input::-webkit-outer-spin-button,
+  .interest-calculator-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .interest-calculator-container input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  /* Calculate Button */
+  .calculate-interest-button {
+    width: 100%;
+    padding: 14px;
+    margin: 20px 0 15px 0;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .calculate-interest-button:hover {
+    background: #2980b9;
+  }
+  
+  /* Error Message */
+  .interest-error {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    background: #fdecea;
+    border-radius: 6px;
+  }
+  
+  /* Results Container */
+  .interest-results {
+    margin: 25px 0 0 0;
+    padding: 15px;
+    background: #e8f5e9;
+    border-radius: 8px;
+  }
+  
+  .interest-results h3 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  .interest-results h3 strong {
+    color: #27ae60;
+    font-weight: 600;
+  }
+  
+  /* Back Button (Outside Container) */
+  .interest-back-button {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px;
+    margin-top: 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .interest-back-button:hover {
+    background: #c0392b;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .interest-calculator-wrapper {
+      padding: 15px;
+    }
+    
+    .interest-calculator-container {
+      padding: 20px 15px;
+    }
+    
+    .interest-calculator-container h2 {
+      font-size: 1.4rem;
+    }
+    
+    .interest-calculator-container input {
+      padding: 11px 12px;
+      font-size: 0.95rem;
+    }
+    
+    .calculate-interest-button,
+    .interest-back-button {
+      padding: 13px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Prevent zooming on iOS input focus */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    .interest-calculator-container input {
+      font-size: 16px !important;
+    }
+  }

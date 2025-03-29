@@ -1,0 +1,156 @@
+/* Mobile-First EMI Calculator Styles */
+.emi-calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Calculator Container */
+  .emi-calculator-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Title */
+  .emi-calculator-container h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Input Fields - Mobile Optimized */
+  .emi-calculator-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    background: #f8f9fa;
+    box-sizing: border-box;
+  }
+  
+  /* Remove number input spinners */
+  .emi-calculator-container input::-webkit-outer-spin-button,
+  .emi-calculator-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .emi-calculator-container input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  /* Calculate Button */
+  .calculate-emi-button {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .calculate-emi-button:hover {
+    background: #2980b9;
+  }
+  
+  /* Error Message */
+  .emi-error {
+    margin: 10px 0 0 0;
+    padding: 8px;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    background: #fdecea;
+    border-radius: 6px;
+  }
+  
+  /* Results Container */
+  .emi-results {
+    margin: 20px 0 0 0;
+    padding: 12px;
+    background: #e8f5e9;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .emi-results p {
+    margin: 8px 0;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .emi-results strong {
+    color: #27ae60;
+    font-weight: 600;
+  }
+  
+  /* Back Button (Outside Container) */
+  .emi-back-button {
+    width: 100%;
+    max-width: 350px;
+    padding: 14px;
+    margin-top: 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .emi-back-button:hover {
+    background: #c0392b;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 400px) {
+    .emi-calculator-wrapper {
+      padding: 15px;
+    }
+    
+    .emi-calculator-container {
+      padding: 20px 15px;
+    }
+    
+    .emi-calculator-container h2 {
+      font-size: 1.4rem;
+    }
+    
+    .emi-calculator-container input {
+      padding: 11px 12px;
+      font-size: 0.95rem;
+    }
+    
+    .calculate-emi-button,
+    .emi-back-button {
+      padding: 13px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Prevent zooming on iOS input focus */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    .emi-calculator-container input {
+      font-size: 16px !important;
+    }
+  }

@@ -1,0 +1,158 @@
+/* Mobile-First Age Calculator Styles */
+.age-calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Calculator Container */
+  .age-calculator-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Title */
+  .age-calculator-container h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Date Input - Fixed for all browsers */
+  .age-calculator-container input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Date picker icon fix */
+  .age-calculator-container input[type="date"]::-webkit-calendar-picker-indicator {
+    padding: 0;
+    opacity: 0.7;
+  }
+  
+  /* Calculate Button */
+  .calculate-button {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .calculate-button:hover {
+    background: #2980b9;
+  }
+  
+  /* Result Display */
+  .age-result {
+    margin: 20px 0 0 0;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 8px;
+  }
+  
+  /* Success Result */
+  .age-result.success {
+    color: #27ae60;
+    background: #e8f5e9;
+  }
+  
+  /* Error Result */
+  .age-result.error {
+    color: #e74c3c;
+    background: #fdecea;
+  }
+  
+  /* Back Button (Outside Container) */
+  .calculator-back-button {
+    width: 100%;
+    max-width: 350px;
+    padding: 14px;
+    margin-top: 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .calculator-back-button:hover {
+    background: #c0392b;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 400px) {
+    .age-calculator-wrapper {
+      padding: 15px;
+    }
+    
+    .age-calculator-container {
+      padding: 20px 15px;
+    }
+    
+    .age-calculator-container h2 {
+      font-size: 1.4rem;
+    }
+    
+    .age-calculator-container input[type="date"] {
+      padding: 11px 12px;
+      font-size: 0.95rem;
+    }
+    
+    .calculate-button,
+    .calculator-back-button {
+      padding: 13px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Fix for iOS zooming on input */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type="date"] {
+      font-size: 16px !important;
+    }
+  }
+  .age-calculator-container button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color, #007bff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}

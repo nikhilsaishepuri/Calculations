@@ -1,0 +1,163 @@
+/* Mobile-First BMI Calculator Styles */
+.bmi-calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: #f5f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Calculator Container */
+  .bmi-calculator-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Title */
+  .bmi-calculator-container h2 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Input Fields - Mobile Optimized */
+  .bmi-calculator-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    box-sizing: border-box;
+  }
+  
+  /* Remove number input spinners */
+  .bmi-calculator-container input::-webkit-outer-spin-button,
+  .bmi-calculator-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .bmi-calculator-container input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  /* Calculate Button */
+  .calculate-bmi-button {
+    width: 100%;
+    padding: 14px;
+    margin: 20px 0 15px 0;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .calculate-bmi-button:hover {
+    background: #2980b9;
+  }
+  
+  /* Error Message */
+  .bmi-error {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    background: #fdecea;
+    border-radius: 6px;
+  }
+  
+  /* Results Container */
+  .bmi-results {
+    margin: 25px 0 0 0;
+    padding: 15px;
+    background: #e8f5e9;
+    border-radius: 8px;
+  }
+  
+  .bmi-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .bmi-category {
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  .bmi-category.underweight { color: #3498db; }
+  .bmi-category.normal { color: #27ae60; }
+  .bmi-category.overweight { color: #f39c12; }
+  .bmi-category.obese { color: #e74c3c; }
+  
+  /* Back Button (Outside Container) */
+  .bmi-back-button {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px;
+    margin-top: 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .bmi-back-button:hover {
+    background: #c0392b;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .bmi-calculator-wrapper {
+      padding: 15px;
+    }
+    
+    .bmi-calculator-container {
+      padding: 20px 15px;
+    }
+    
+    .bmi-calculator-container h2 {
+      font-size: 1.4rem;
+    }
+    
+    .bmi-calculator-container input {
+      padding: 11px 12px;
+      font-size: 0.95rem;
+    }
+    
+    .calculate-bmi-button,
+    .bmi-back-button {
+      padding: 13px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Prevent zooming on iOS input focus */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    .bmi-calculator-container input {
+      font-size: 16px !important;
+    }
+  }
